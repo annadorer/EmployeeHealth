@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>337342850249-5uq6hm0nije94d26nec9sc56puesq8v9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.337342850249-5uq6hm0nije94d26nec9sc56puesq8v9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAZ_ALTwwt4qvOPzRFUFeuVCwj1orydHaI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>337342850249</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.EmployeeHealth</string>
+	<key>PROJECT_ID</key>
+	<string>employee-health-da475</string>
+	<key>STORAGE_BUCKET</key>
+	<string>employee-health-da475.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:337342850249:ios:2f63547d8b2a779d0a1918</string>
+</dict>
+</plist>
