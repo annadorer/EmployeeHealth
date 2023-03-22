@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
 
 class SignUpViewController: UIViewController {
     
@@ -19,8 +22,23 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpAction(_ sender: Any) {
         if password.text != passwordConfirm.text {
-            _ = UIAlertController(title: "Пароли не совпадают", message: "Пожалуйста, введите пароль верно", preferredStyle: .alert)
-            _ = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            let alertController = UIAlertController(title: "Пароли не совпадают", message: "Пожалуйста, введите пароль верно", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
+        else {
+            Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, error) in
+                if error == nil {
+                    self.performSegue(withIdentifier: "signUpToHome", sender: self)
+                }
+                else {
+                    let alertController = UIAlertController(title: "Ошибка", message: error?.localizedDescription, preferredStyle: .alert)
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
         }
     }
     

@@ -37,15 +37,34 @@
                                     <segue destination="Ojz-u8-GJt" kind="show" id="1XH-7q-reQ"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="startViewImage" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f7U-w0-xZc">
+                                <rect key="frame" x="67" y="92" width="280" height="381"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Здоровье сотрудников" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCr-qq-MUF">
+                                <rect key="frame" x="62" y="481" width="292" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="PKY-Wy-EDw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M49-qS-a3L"/>
                         <color key="backgroundColor" red="0.78988135169999996" green="0.86577947509999997" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="M49-qS-a3L" firstAttribute="trailing" secondItem="f7U-w0-xZc" secondAttribute="trailing" constant="67" id="0iq-kP-Vox"/>
+                            <constraint firstItem="M49-qS-a3L" firstAttribute="trailing" secondItem="iCr-qq-MUF" secondAttribute="trailing" constant="60" id="ADx-OK-0w7"/>
                             <constraint firstItem="M49-qS-a3L" firstAttribute="bottom" secondItem="EQ2-hj-mbt" secondAttribute="bottom" constant="68" id="Buu-xg-2q0"/>
+                            <constraint firstItem="f7U-w0-xZc" firstAttribute="top" secondItem="M49-qS-a3L" secondAttribute="top" id="NEy-Y4-tO2"/>
                             <constraint firstItem="2pk-NU-MZJ" firstAttribute="top" secondItem="M49-qS-a3L" secondAttribute="top" constant="585" id="SpO-QX-3IS"/>
                             <constraint firstItem="2pk-NU-MZJ" firstAttribute="leading" secondItem="M49-qS-a3L" secondAttribute="leading" constant="79" id="giB-ej-0Di"/>
+                            <constraint firstItem="f7U-w0-xZc" firstAttribute="leading" secondItem="M49-qS-a3L" secondAttribute="leading" constant="67" id="gtY-X9-LF8"/>
+                            <constraint firstAttribute="bottom" secondItem="iCr-qq-MUF" secondAttribute="bottom" constant="381" id="mBu-Nj-4ph"/>
                             <constraint firstItem="M49-qS-a3L" firstAttribute="trailing" secondItem="EQ2-hj-mbt" secondAttribute="trailing" constant="79" id="pHG-wt-ljP"/>
+                            <constraint firstItem="iCr-qq-MUF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="M49-qS-a3L" secondAttribute="leading" id="qg1-bv-7rf"/>
                             <constraint firstItem="EQ2-hj-mbt" firstAttribute="leading" secondItem="M49-qS-a3L" secondAttribute="leading" constant="79" id="r48-au-RQ6"/>
+                            <constraint firstItem="iCr-qq-MUF" firstAttribute="top" secondItem="f7U-w0-xZc" secondAttribute="bottom" constant="8" id="rel-YZ-9iM"/>
                             <constraint firstItem="M49-qS-a3L" firstAttribute="trailing" secondItem="2pk-NU-MZJ" secondAttribute="trailing" constant="79" id="w5i-oQ-yik"/>
                         </constraints>
                     </view>
@@ -93,7 +112,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginAction:" destination="Ojz-u8-GJt" eventType="touchUpInside" id="M5V-5h-Cd6"/>
-                                    <segue destination="cCt-7q-Gj9" kind="show" id="jFv-5G-pWy"/>
+                                    <segue destination="cCt-7q-Gj9" kind="show" identifier="authToHome" id="jFv-5G-pWy"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ec3-5P-2Cq">
@@ -236,9 +255,8 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="signUpAction" destination="aIt-R7-3g2" eventType="touchUpInside" id="S01-Tj-nCJ"/>
                                     <action selector="signUpAction:" destination="aIt-R7-3g2" eventType="touchUpInside" id="hFI-wv-046"/>
-                                    <segue destination="cCt-7q-Gj9" kind="show" id="yPF-Kz-fHf"/>
+                                    <segue destination="cCt-7q-Gj9" kind="show" identifier="signUpToHome" id="Zz1-fY-pJg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Какими отделами вы руководите?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIx-PM-YqD">
@@ -292,6 +310,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jFv-5G-pWy"/>
+        <segue reference="Zz1-fY-pJg"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="startViewImage" width="512" height="512"/>
+    </resources>
 </document>
