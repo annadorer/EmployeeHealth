@@ -10,29 +10,30 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 
-class AuthViewController: UIViewController {
+final class AuthViewController: UIViewController {
     
     @IBOutlet private var email: UITextField!
     @IBOutlet private var password: UITextField!
     
     
-    @IBAction func loginAction() {
+    @IBAction func loginAction(_ sender: Any) {
         Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (user, error) in
-            if error == nil {
+            if error == nil{
                 self.performSegue(withIdentifier: "authToHome", sender: self)
-            } else {
+            }
+            else {
                 self.wrongAuthError()
             }
         }
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     private func wrongAuthError() {
         let alert = UIAlertController(title: "Ошибка", message: "Неправильно введен логин или пароль!", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        present(alert, animated: true)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        self.present(alert, animated: true, completion: nil)
     }
 }
