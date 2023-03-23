@@ -33,10 +33,18 @@ class SignUpViewController: UIViewController {
                     self.performSegue(withIdentifier: "signUpToHome", sender: self)
                 }
                 else {
-                    let alertController = UIAlertController(title: "Ошибка", message: error?.localizedDescription, preferredStyle: .alert)
+                    let alertController = UIAlertController(title: "Ошибка", message: "Заполните все поля!", preferredStyle: .alert)
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                     alertController.addAction(defaultAction)
                     self.present(alertController, animated: true, completion: nil)
+                    let db = Firestore.firestore()
+                    db.collection("users").addDocument(data: [
+                        "FIO": self.name.text!,
+                        "companyName": self.companyName.text!,
+                        "departmentName": self.department.text!,
+                        "email": self.email.text!,
+                        "password": self.password.text!,
+                        "passwordConfirm": self.passwordConfirm.text!])
                 }
             }
         }
@@ -44,6 +52,5 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 }

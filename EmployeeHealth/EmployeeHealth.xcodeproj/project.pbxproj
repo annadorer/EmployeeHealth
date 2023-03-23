@@ -75,17 +75,12 @@
 		952A4F0229C9957900F9388D /* EmployeeHealth */ = {
 			isa = PBXGroup;
 			children = (
-				952A4F0329C9957900F9388D /* AppDelegate.swift */,
-				952A4F0529C9957900F9388D /* SceneDelegate.swift */,
+				958A991329CAEB3200332F11 /* View */,
+				958A991229CAEB1E00332F11 /* Delegate */,
+				958A991129CAEA5700332F11 /* Controllers */,
 				958A98FD29C9B85600332F11 /* GoogleService-Info.plist */,
-				952A4F0729C9957900F9388D /* ViewController.swift */,
-				952A4F0929C9957900F9388D /* Main.storyboard */,
 				952A4F0C29C9957B00F9388D /* Assets.xcassets */,
-				952A4F0E29C9957B00F9388D /* LaunchScreen.storyboard */,
 				952A4F1129C9957B00F9388D /* Info.plist */,
-				958A98F729C9A9A500332F11 /* AuthViewController.swift */,
-				958A990A29C9C2BE00332F11 /* SignUpViewController.swift */,
-				958A990F29CADD3F00332F11 /* StartViewController.swift */,
 			);
 			path = EmployeeHealth;
 			sourceTree = "<group>";
@@ -95,6 +90,35 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		958A991129CAEA5700332F11 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				952A4F0729C9957900F9388D /* ViewController.swift */,
+				958A990A29C9C2BE00332F11 /* SignUpViewController.swift */,
+				958A98F729C9A9A500332F11 /* AuthViewController.swift */,
+				958A990F29CADD3F00332F11 /* StartViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		958A991229CAEB1E00332F11 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				952A4F0529C9957900F9388D /* SceneDelegate.swift */,
+				952A4F0329C9957900F9388D /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		958A991329CAEB3200332F11 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				952A4F0E29C9957B00F9388D /* LaunchScreen.storyboard */,
+				952A4F0929C9957900F9388D /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
