@@ -37,7 +37,7 @@ class SignUpViewController: UIViewController {
     }
     
     private func generateUserData() -> [String : Any] {
-        var user: [String: Any] = ["FIO": name.text!,
+        let user: [String: Any] = ["FIO": name.text!,
                 "companyName": companyName.text!,
                 "departmentName": department.text!,
                 "email": email.text!,

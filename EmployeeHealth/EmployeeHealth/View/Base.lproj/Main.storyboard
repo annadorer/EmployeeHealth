@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -159,12 +160,24 @@
         <!--Home View Controller-->
         <scene sceneID="QaW-Z8-pS6">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="cCt-7q-Gj9" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="cCt-7q-Gj9" customClass="HomeViewController" customModule="EmployeeHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="HomeViewController" id="Fii-2P-bF8" customClass="HomeViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WyK-8M-bN5">
+                                <rect key="frame" x="0.0" y="117" width="414" height="726"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="JnE-fi-gIs"/>
                         <color key="backgroundColor" red="0.78988135169999996" green="0.86577947509999997" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WyK-8M-bN5" firstAttribute="top" secondItem="JnE-fi-gIs" secondAttribute="top" constant="25" id="CcW-2k-MyT"/>
+                            <constraint firstItem="WyK-8M-bN5" firstAttribute="trailing" secondItem="JnE-fi-gIs" secondAttribute="trailing" id="FHk-sd-szB"/>
+                            <constraint firstItem="JnE-fi-gIs" firstAttribute="bottom" secondItem="WyK-8M-bN5" secondAttribute="bottom" constant="19" id="oKS-dj-UdL"/>
+                            <constraint firstItem="WyK-8M-bN5" firstAttribute="leading" secondItem="JnE-fi-gIs" secondAttribute="leading" id="otd-m9-L7p"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nzz-d6-tiP"/>
                 </viewController>
@@ -365,5 +378,8 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="startViewImage" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
