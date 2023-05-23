@@ -19,27 +19,27 @@ enum Answers: Int, Codable {
 }
 
 struct EmployeeData: Codable {
-    @DocumentID var id: String?
     let FIO: String
     let department: String
-    let answers1: String
-    let answers2: String
-    let answers3: String
-    let answers4: String
-    let answers5: String
-    let answers6: String
-    let answers7: String
-    let answers8: String
-    let answers9: String
-    let answers10: String
-    let answers11: String
-    let answers12: String
-    let answers13: String
-    let answers14: String
-    let answers15: String
-    let answers16: String
-    let answers17: String
-    let answers18: String
-    let answers19: String
-    let answers20: String
+    let id: UUID
+    let question1: String
+    let question2: String
+    let question3: String
+    let question4: String
+    let question5: String
+    let question6: String
+    let question7: String
+    let question8: String
+    let question9: String
+    let question10: String
+    let question11: String
+    let question12: String
+    let question13: String
+    let question14: String
+    let question15: String
+    let question16: String
+    let question17: String
+    let question18: String
+    let question19: String
+    let question20: String
 }
