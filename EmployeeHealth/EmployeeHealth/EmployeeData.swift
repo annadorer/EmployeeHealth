@@ -8,16 +8,6 @@
 import Foundation
 import FirebaseFirestoreSwift
 
-enum Answers: Int, Codable {
-    case never = 0
-    case very_rarely = 1
-    case rarely = 2
-    case sometimes = 3
-    case often = 4
-    case very_often = 5
-    case everyday = 6
-}
-
 struct EmployeeData: Codable {
     let FIO: String
     let department: String
@@ -42,6 +32,8 @@ struct EmployeeData: Codable {
     let question18: Int
     let question19: Int
     let question20: Int
+    let question21: Int
+    let question22: Int
 }
 
 struct supervisorData: Codable {
