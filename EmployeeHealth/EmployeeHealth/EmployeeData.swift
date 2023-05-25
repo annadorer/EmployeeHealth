@@ -9,37 +9,43 @@ import Foundation
 import FirebaseFirestoreSwift
 
 enum Answers: Int, Codable {
-    case never = 1
-    case very_rarely = 2
-    case rarely = 3
-    case sometimes = 4
-    case often = 5
-    case very_often = 6
-    case everyday = 7
+    case never = 0
+    case very_rarely = 1
+    case rarely = 2
+    case sometimes = 3
+    case often = 4
+    case very_often = 5
+    case everyday = 6
 }
 
 struct EmployeeData: Codable {
     let FIO: String
     let department: String
     let id: UUID
-    let question1: String
-    let question2: String
-    let question3: String
-    let question4: String
-    let question5: String
-    let question6: String
-    let question7: String
-    let question8: String
-    let question9: String
-    let question10: String
-    let question11: String
-    let question12: String
-    let question13: String
-    let question14: String
-    let question15: String
-    let question16: String
-    let question17: String
-    let question18: String
-    let question19: String
-    let question20: String
+    let question1: Int
+    let question2: Int
+    let question3: Int
+    let question4: Int
+    let question5: Int
+    let question6: Int
+    let question7: Int
+    let question8: Int
+    let question9: Int
+    let question10: Int
+    let question11: Int
+    let question12: Int
+    let question13: Int
+    let question14: Int
+    let question15: Int
+    let question16: Int
+    let question17: Int
+    let question18: Int
+    let question19: Int
+    let question20: Int
+}
+
+struct supervisorData: Codable {
+    let FIO: String
+    let companyName: String
+    let departmentName: String
 }

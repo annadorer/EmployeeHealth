@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -122,7 +121,7 @@
                                     <constraint firstAttribute="width" constant="328" id="oy3-4M-aaD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2Rm-Bd-vLQ"/>
@@ -146,7 +145,9 @@
                             <constraint firstItem="cPo-UW-xKI" firstAttribute="top" secondItem="tNa-Mm-B2n" secondAttribute="bottom" constant="8" id="z8a-k4-Jog"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="b7u-g2-qbB"/>
+                    <navigationItem key="navigationItem" id="b7u-g2-qbB">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="tqD-4q-BKo"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="email" destination="cPo-UW-xKI" id="gQo-oC-0i9"/>
                         <outlet property="password" destination="ec3-5P-2Cq" id="PFP-zM-UeR"/>
@@ -161,29 +162,115 @@
         <scene sceneID="QaW-Z8-pS6">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="cCt-7q-Gj9" customClass="HomeViewController" customModule="EmployeeHealth" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" restorationIdentifier="HomeViewController" id="Fii-2P-bF8" customClass="HomeViewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="HomeViewController" id="Fii-2P-bF8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WyK-8M-bN5">
-                                <rect key="frame" x="0.0" y="117" width="414" height="726"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TOl-VN-3BR">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.78988135169999996" green="0.86577947509999997" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIndentifier" textLabel="OH0-ee-548" detailTextLabel="eXS-Gd-n6f" rowHeight="58" style="IBUITableViewCellStyleSubtitle" id="sBP-WV-p3t">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sBP-WV-p3t" id="r0v-bx-gBl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="58"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OH0-ee-548">
+                                                    <rect key="frame" x="20" y="7" width="41.5" height="24"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eXS-Gd-n6f">
+                                                    <rect key="frame" x="20" y="31" width="58" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.78988135169999996" green="0.86577947509999997" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.78988135169999996" green="0.86577947509999997" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="cCt-7q-Gj9" id="WRT-fJ-aL5"/>
+                                    <outlet property="delegate" destination="cCt-7q-Gj9" id="qJB-MR-pca"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JnE-fi-gIs"/>
                         <color key="backgroundColor" red="0.78988135169999996" green="0.86577947509999997" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="WyK-8M-bN5" firstAttribute="top" secondItem="JnE-fi-gIs" secondAttribute="top" constant="25" id="CcW-2k-MyT"/>
-                            <constraint firstItem="WyK-8M-bN5" firstAttribute="trailing" secondItem="JnE-fi-gIs" secondAttribute="trailing" id="FHk-sd-szB"/>
-                            <constraint firstItem="JnE-fi-gIs" firstAttribute="bottom" secondItem="WyK-8M-bN5" secondAttribute="bottom" constant="19" id="oKS-dj-UdL"/>
-                            <constraint firstItem="WyK-8M-bN5" firstAttribute="leading" secondItem="JnE-fi-gIs" secondAttribute="leading" id="otd-m9-L7p"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nzz-d6-tiP"/>
+                    <navigationItem key="navigationItem" id="nzz-d6-tiP">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="uwe-wu-laW"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="fqn-nJ-PTa">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="PpM-kk-Ddn" kind="show" id="U8H-rv-Sp0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="TOl-VN-3BR" id="XaX-kP-ITQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfl-u9-GkP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5669.5652173913049" y="-28.125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iC0-Na-zik">
+            <objects>
+                <viewController id="PpM-kk-Ddn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sA9-D1-fOY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рекомендации для профилактики эмоционального выгорания" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVT-Fe-MTt">
+                                <rect key="frame" x="57" y="87" width="300" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="45" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLB-7a-uyI">
+                                <rect key="frame" x="20" y="138" width="374" height="712"/>
+                                <mutableString key="text">Итак, что же можно сделать с выгоранием? Специалисты, занимающиеся этой проблемой, советуют проанализировать отношение к своей профессиональной деятельности и изменить свой образ жизни.
+1. Ответьте на вопрос: «Зачем я работаю?» Составьте список всех причин – и реальных, и абстрактных, которые заставляют вас работать. Определите мотивацию, ценность и значение своей работы.
+2.  Убедитесь в правильности утверждения: «Я действительно хочу этим заниматься». Перечислите то, чем вам нравится заниматься, в убывающей последовательности. А теперь вспомните, когда вы в последний раз этим занимались.
+3.  Создайте группу поддержки. Это регулярные встречи друзей и сотрудников.
+4. Начните заботиться о своем физическом здоровье. Сюда входят физические упражнения, питание и борьба с вредными привычками, например курением.
+5. Начините заботиться о своем психологическом здоровье. Используйте для этого тренинги: релаксации, ведения переговоров, управления временем и ассертивности.
+6. Делайте каждый день какую-нибудь глупость. Покатайтесь на скейте, поиграйте в классики, попускайте мыльные пузыри или погримасничайте. Расслабьтесь, улыбнитесь и не воспринимайте себя слишком серьезно.
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C1N-Ye-hkf"/>
+                        <color key="backgroundColor" red="0.78988135169999996" green="0.86577947509999997" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SVT-Fe-MTt" firstAttribute="top" secondItem="sA9-D1-fOY" secondAttribute="top" constant="87" id="4me-Si-HGy"/>
+                            <constraint firstItem="C1N-Ye-hkf" firstAttribute="trailing" secondItem="jLB-7a-uyI" secondAttribute="trailing" constant="20" id="Ezd-cB-o8Q"/>
+                            <constraint firstItem="jLB-7a-uyI" firstAttribute="leading" secondItem="C1N-Ye-hkf" secondAttribute="leading" constant="20" id="Q7V-St-2y5"/>
+                            <constraint firstItem="C1N-Ye-hkf" firstAttribute="bottom" secondItem="jLB-7a-uyI" secondAttribute="bottom" constant="12" id="cQi-aY-qcF"/>
+                            <constraint firstItem="SVT-Fe-MTt" firstAttribute="leading" secondItem="C1N-Ye-hkf" secondAttribute="leading" constant="57" id="hHe-fE-C6e"/>
+                            <constraint firstItem="jLB-7a-uyI" firstAttribute="top" secondItem="SVT-Fe-MTt" secondAttribute="bottom" constant="8" symbolic="YES" id="qfn-hK-Sv5"/>
+                            <constraint firstItem="C1N-Ye-hkf" firstAttribute="trailing" secondItem="SVT-Fe-MTt" secondAttribute="trailing" constant="57" id="ub6-fF-vWy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ntk-hl-mPG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KX8-Kx-DaS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6718.840579710145" y="-28.125"/>
         </scene>
         <!--SignUpViewController-->
         <scene sceneID="gCV-ji-WwZ">
@@ -339,7 +426,9 @@
                             <constraint firstAttribute="bottom" secondItem="nQx-Zn-49X" secondAttribute="bottom" constant="216" id="ybe-lg-2Hg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dC4-vq-Wqh"/>
+                    <navigationItem key="navigationItem" id="dC4-vq-Wqh">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="eXx-0e-l1d"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="companyName" destination="AZL-Wg-d3A" id="eLT-Mj-UnL"/>
                         <outlet property="department" destination="68U-hH-edL" id="xmB-Nr-X5J"/>
@@ -362,6 +451,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hwU-xs-ift">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -374,12 +467,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="aQA-Z7-Nod"/>
+        <segue reference="RW6-R6-y2g"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="startViewImage" width="512" height="512"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
