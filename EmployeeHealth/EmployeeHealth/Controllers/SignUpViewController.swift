@@ -10,7 +10,7 @@ import FirebaseCore
 import FirebaseFirestore
 import FirebaseAuth
 
-class SignUpViewController: UIViewController {
+final class SignUpViewController: UIViewController {
     
     @IBOutlet private var name: UITextField!
     @IBOutlet private var companyName: UITextField!

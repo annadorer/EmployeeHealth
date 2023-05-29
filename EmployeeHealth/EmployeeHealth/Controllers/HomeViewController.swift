@@ -11,40 +11,44 @@ import Firebase
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import FirebaseAuth
+import CodableFirebase
 
-class HomeViewController: UIViewController {
+
+
+final class HomeViewController: UIViewController {
     
     var employeeData = [EmployeeData]()
 
     @IBOutlet private var tableView: UITableView?
     
-    func getData() {
+    private func getData() {
         let db = Firestore.firestore()
-        db.collection("Ответы сотрудников").getDocuments() { [self] (querySnapshot, error) in
-                for document in querySnapshot!.documents {
-                    self.employeeData.append(self.parcingData(data: document.data()))
-
+        let query = db.collection("Информация о руководителях").whereField("email", isEqualTo: Auth.auth().currentUser?.email! as Any)
+        
+        query.getDocuments { (snapshot, error) in
+            if error != nil {
+                return
+            } else {
+                let currentUser = try! snapshot!.documents.first?.data(as: SupervisorData.self)
+                let startDate = Date().startOfMonth()
+                let endDate = Date().endOfMonth()
+                let queryDocs = db.collection("Ответы сотрудников")
+                    .whereField("department", isEqualTo: currentUser?.departmentName as Any)
+                    .whereField("date", isGreaterThanOrEqualTo: startDate)
+                    .whereField("date", isLessThanOrEqualTo: endDate)
+                queryDocs.getDocuments() { [self] (querySnapshot, error) in
+                        for document in querySnapshot!.documents {
+                            self.employeeData.append(try! FirestoreDecoder().decode(EmployeeData.self, from: document.data()))
+                        }
+                        print(self.employeeData)
+                        self.tableView?.reloadData()
                 }
-                print(self.employeeData)
-                self.tableView?.reloadData()
-        }
-    }
-    
-    func parcingData(data: [String:Any]) -> (EmployeeData) {
-        let decoder = JSONDecoder()
-        let dict = data
-        if let data = try? JSONSerialization.data(withJSONObject: dict, options: []) {
-            do {
-                _ = try decoder.decode(EmployeeData.self, from: data)
-            } catch {
-                print(error)
             }
         }
-        return try! decoder.decode(EmployeeData.self, from: JSONSerialization.data(withJSONObject: data))
     }
-    
-    
-    func testResult(employeeData: EmployeeData) -> String {
+
+    private func testResult(employeeData: EmployeeData) -> String {
         let startStr = "У данного сотрудника: "
         var result = startStr
         if (employeeData.question1 + employeeData.question2 + employeeData.question3 + employeeData.question6 + employeeData.question8 + employeeData.question13 + employeeData.question14 + employeeData.question20) >= 36 {
@@ -56,14 +60,13 @@ class HomeViewController: UIViewController {
         if (employeeData.question4 + employeeData.question7 + employeeData.question9 + employeeData.question12 + employeeData.question17 + employeeData.question18 + employeeData.question19 + employeeData.question21) >= 32 {
             result = result + ".обесценивание персональных достижений"
         }
-        let anotherResult = "У данного сотрудника все отлично!"
+        let anotherResult = "У данного сотрудника хорошее состояние!"
         return result == startStr ? anotherResult : result
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getData()
-        //self.tableView?.reloadData()
     }
 }
 
@@ -83,5 +86,15 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         _ = employeeData[indexPath.row]
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension Date {
+    func startOfMonth() -> Date {
+        return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Calendar.current.startOfDay(for: self)))!
+    }
+    
+    func endOfMonth() -> Date {
+        return Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonth())!
     }
 }

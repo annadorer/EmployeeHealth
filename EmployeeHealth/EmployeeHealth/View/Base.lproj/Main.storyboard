@@ -168,7 +168,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результаты опросника за май:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soa-5b-6yE">
                                 <rect key="frame" x="20" y="104" width="374" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -185,9 +185,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OH0-ee-548">
-                                                    <rect key="frame" x="20" y="9.5" width="41.5" height="24"/>
+                                                    <rect key="frame" x="20" y="9.5" width="39.5" height="24"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -244,37 +244,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="45" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLB-7a-uyI">
-                                <rect key="frame" x="20" y="138" width="374" height="712"/>
-                                <mutableString key="text">Итак, что же можно сделать с выгоранием? Специалисты, занимающиеся этой проблемой, советуют проанализировать отношение к своей профессиональной деятельности и изменить свой образ жизни.
-1. Ответьте на вопрос: «Зачем я работаю?» Составьте список всех причин – и реальных, и абстрактных, которые заставляют вас работать. Определите мотивацию, ценность и значение своей работы.
-2.  Убедитесь в правильности утверждения: «Я действительно хочу этим заниматься». Перечислите то, чем вам нравится заниматься, в убывающей последовательности. А теперь вспомните, когда вы в последний раз этим занимались.
-3.  Создайте группу поддержки. Это регулярные встречи друзей и сотрудников.
-4. Начните заботиться о своем физическом здоровье. Сюда входят физические упражнения, питание и борьба с вредными привычками, например курением.
-5. Начините заботиться о своем психологическом здоровье. Используйте для этого тренинги: релаксации, ведения переговоров, управления временем и ассертивности.
-6. Делайте каждый день какую-нибудь глупость. Покатайтесь на скейте, поиграйте в классики, попускайте мыльные пузыри или погримасничайте. Расслабьтесь, улыбнитесь и не воспринимайте себя слишком серьезно.
-</mutableString>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рекомендации для профилактики эмоционального выгорания" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVT-Fe-MTt">
+                                <rect key="frame" x="57" y="92" width="300" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Рекомендации для профилактики эмоционального выгорания" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVT-Fe-MTt">
-                                <rect key="frame" x="52" y="97" width="300" height="43"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="45" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLB-7a-uyI">
+                                <rect key="frame" x="20" y="143" width="374" height="609"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Итак, что же можно сделать с выгоранием? Профилактика выгорания - это задача как самого сотрудника, так и работодателя.
+В комфортной среде работники с меньшей вероятностью испытают такого рода проблемы. Обратите внимание на следующие рекомендации:
+1. Сделайте график работы более гибким. Возможность брать дни удаленной работы и оплачиваемые дни отдыха уменьшают вероятность выгорания на 36%.
+2.  Подчеркните важность баланса работы и отдыха. Донесите до своих коллег, что иметь другие приоритеты за стенами офиса — это нормально, и на отдыхе лучше изолировать себя от рабочих коммуникаций. Соблюдение этих правил руководителями подразделений поможет закрепить подобную модель поведения среди сотрудников.
+3. Пересмотрите социальные привилегии работников, касающиеся здоровья. Не обязательно нанимать штатного психолога: порой можно обеспечить сотрудникам доступ к удаленным консультациям специалистов. Корпоративные скидки на спортивные программы, а также программы страхования помогут работникам чувствовать себя более уверенно в столь нестабильное время.
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="C1N-Ye-hkf"/>
                         <color key="backgroundColor" red="0.78988135169999996" green="0.86577947509999997" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="SVT-Fe-MTt" firstAttribute="top" secondItem="sA9-D1-fOY" secondAttribute="top" constant="97" id="4me-Si-HGy"/>
-                            <constraint firstItem="C1N-Ye-hkf" firstAttribute="trailing" secondItem="jLB-7a-uyI" secondAttribute="trailing" constant="20" id="Ezd-cB-o8Q"/>
-                            <constraint firstItem="jLB-7a-uyI" firstAttribute="leading" secondItem="C1N-Ye-hkf" secondAttribute="leading" constant="20" id="Q7V-St-2y5"/>
-                            <constraint firstItem="C1N-Ye-hkf" firstAttribute="bottom" secondItem="jLB-7a-uyI" secondAttribute="bottom" constant="12" id="cQi-aY-qcF"/>
-                            <constraint firstItem="SVT-Fe-MTt" firstAttribute="leading" secondItem="C1N-Ye-hkf" secondAttribute="leading" constant="52" id="hHe-fE-C6e"/>
-                            <constraint firstItem="jLB-7a-uyI" firstAttribute="top" secondItem="SVT-Fe-MTt" secondAttribute="bottom" constant="-2" id="qfn-hK-Sv5"/>
-                            <constraint firstItem="C1N-Ye-hkf" firstAttribute="trailing" secondItem="SVT-Fe-MTt" secondAttribute="trailing" constant="62" id="ub6-fF-vWy"/>
+                            <constraint firstItem="jLB-7a-uyI" firstAttribute="top" secondItem="SVT-Fe-MTt" secondAttribute="bottom" constant="8" symbolic="YES" id="G3x-ag-IDu"/>
+                            <constraint firstItem="C1N-Ye-hkf" firstAttribute="trailing" secondItem="SVT-Fe-MTt" secondAttribute="trailing" constant="57" id="Q4L-K4-5I8"/>
+                            <constraint firstItem="SVT-Fe-MTt" firstAttribute="top" secondItem="C1N-Ye-hkf" secondAttribute="top" id="em1-uG-LUu"/>
+                            <constraint firstItem="jLB-7a-uyI" firstAttribute="leading" secondItem="C1N-Ye-hkf" secondAttribute="leading" constant="20" id="hgj-Ke-nCN"/>
+                            <constraint firstItem="SVT-Fe-MTt" firstAttribute="leading" secondItem="C1N-Ye-hkf" secondAttribute="leading" constant="57" id="lzr-U5-BR6"/>
+                            <constraint firstItem="C1N-Ye-hkf" firstAttribute="trailing" secondItem="jLB-7a-uyI" secondAttribute="trailing" constant="20" id="t0M-IY-zF9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ntk-hl-mPG"/>
@@ -326,7 +329,7 @@
                                     <constraint firstAttribute="height" constant="44" id="vwX-Cq-HaF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ФИО" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9E-Ud-ieh">
                                 <rect key="frame" x="43" y="128" width="46" height="24"/>
@@ -370,8 +373,8 @@
                                     <action selector="signUpAction:" destination="aIt-R7-3g2" eventType="touchUpInside" id="hFI-wv-046"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какими отделами вы руководите?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIx-PM-YqD">
-                                <rect key="frame" x="43" y="308" width="314" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Каким отделом вы руководите?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIx-PM-YqD">
+                                <rect key="frame" x="43" y="308" width="292" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -379,7 +382,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7xW-32-WiE">
                                 <rect key="frame" x="43" y="598" width="328" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Все поля обязательны для заполнения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQx-Zn-49X">
                                 <rect key="frame" x="53" y="659" width="308" height="21"/>
@@ -478,7 +481,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RW6-R6-y2g"/>
+        <segue reference="owf-gY-XBy"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="info.circle" catalog="system" width="128" height="123"/>

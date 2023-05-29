@@ -6,9 +6,16 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
 import FirebaseFirestoreSwift
+import CodableFirebase
+
 
 struct EmployeeData: Codable {
+    
     let FIO: String
     let department: String
     let id: UUID
@@ -34,10 +41,16 @@ struct EmployeeData: Codable {
     let question20: Int
     let question21: Int
     let question22: Int
+    let date: Timestamp
 }
 
-struct supervisorData: Codable {
+struct SupervisorData: Codable {
     let FIO: String
     let companyName: String
     let departmentName: String
 }
+
+extension DocumentReference: DocumentReferenceType {}
+extension GeoPoint: GeoPointType {}
+extension FieldValue: FieldValueType {}
+extension Timestamp: TimestampType {}

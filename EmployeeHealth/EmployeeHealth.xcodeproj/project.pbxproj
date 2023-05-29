@@ -13,6 +13,7 @@
 		952A4F0B29C9957900F9388D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952A4F0929C9957900F9388D /* Main.storyboard */; };
 		952A4F0D29C9957B00F9388D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952A4F0C29C9957B00F9388D /* Assets.xcassets */; };
 		952A4F1029C9957B00F9388D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952A4F0E29C9957B00F9388D /* LaunchScreen.storyboard */; };
+		954A2A5C2A2110860014ACE6 /* CodableFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = 954A2A5B2A2110860014ACE6 /* CodableFirebase */; };
 		957E345E29E7D56D008A88AB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957E345D29E7D56D008A88AB /* HomeViewController.swift */; };
 		957E346029E7EBF6008A88AB /* EmployeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957E345F29E7EBF6008A88AB /* EmployeeData.swift */; };
 		957E346229E97EC1008A88AB /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 957E346129E97EC1008A88AB /* FirebaseFirestoreSwift */; };
@@ -49,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				954A2A5C2A2110860014ACE6 /* CodableFirebase in Frameworks */,
 				958A990329C9BB1400332F11 /* FirebaseDatabase in Frameworks */,
 				958A990729C9BB1400332F11 /* FirebaseStorage in Frameworks */,
 				958A990E29C9D36000332F11 /* FirebaseFunctions in Frameworks */,
@@ -152,6 +154,7 @@
 				958A990629C9BB1400332F11 /* FirebaseStorage */,
 				958A990D29C9D36000332F11 /* FirebaseFunctions */,
 				957E346129E97EC1008A88AB /* FirebaseFirestoreSwift */,
+				954A2A5B2A2110860014ACE6 /* CodableFirebase */,
 			);
 			productName = EmployeeHealth;
 			productReference = 952A4F0029C9957900F9388D /* EmployeeHealth.app */;
@@ -183,6 +186,7 @@
 			mainGroup = 952A4EF729C9957900F9388D;
 			packageReferences = (
 				958A98FF29C9BB1400332F11 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				954A2A5A2A2110850014ACE6 /* XCRemoteSwiftPackageReference "CodableFirebase" */,
 			);
 			productRefGroup = 952A4F0129C9957900F9388D /* Products */;
 			projectDirPath = "";
@@ -437,6 +441,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		954A2A5A2A2110850014ACE6 /* XCRemoteSwiftPackageReference "CodableFirebase" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alickbass/CodableFirebase.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.2;
+			};
+		};
 		958A98FF29C9BB1400332F11 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -448,6 +460,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		954A2A5B2A2110860014ACE6 /* CodableFirebase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 954A2A5A2A2110850014ACE6 /* XCRemoteSwiftPackageReference "CodableFirebase" */;
+			productName = CodableFirebase;
+		};
 		957E346129E97EC1008A88AB /* FirebaseFirestoreSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 958A98FF29C9BB1400332F11 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
